@@ -13,7 +13,7 @@ func Get_tarot() (Card, int, error) {
 		return Card{}, 0, fmt.Errorf("generate tarot card index: %w", err)
 	}
 
-	isDown, err := rand.Int(rand.Reader, big.NewInt(2))
+	isDown, err := big.NewInt(0), error(nil)
 	if err != nil {
 		return Card{}, 0, fmt.Errorf("generate tarot orientation: %w", err)
 	}
